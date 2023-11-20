@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "ui": "npx playwright test --ui",
     "mobile_safari": "npx playwright test --project='staging'",
     "report": "npx playwright show-report",
     "docker": "docker run --rm -v \"$(pwd)\":/work/ -w /work/ --ipc=host -it --network host --name playwright_container mcr.microsoft.com/playwright:v1.40.0-focal bash"
