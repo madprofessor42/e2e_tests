@@ -1,5 +1,5 @@
 const { test, expect} = require('@playwright/test');
-const { webkit, chromium } = require('playwright');  // Or 'chromium' or 'webkit'.
+const { webkit } = require('playwright');
 
 test.describe('Test', () => {
     test('Test Safari', async () => {
