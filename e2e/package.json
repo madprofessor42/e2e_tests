@@ -1,0 +1,18 @@
+{
+  "name": "16---e2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "mobile_safari": "npx playwright test --project='staging'",
+    "report": "npx playwright show-report",
+    "docker": "docker run --rm -v \"$(pwd)\":/work/ -w /work/ --ipc=host -it --network host --name playwright_container mcr.microsoft.com/playwright:v1.40.0-focal bash"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.9.2"
+  }
+}
