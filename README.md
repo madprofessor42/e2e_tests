@@ -8,6 +8,6 @@
 
 
 # Запуск тестов
-`npx playwright test --ui` - открыть GUI режим
-`npx playwright test названиеФайла --headed` - запустить тест в браузере
+- `npx playwright test --ui` - открыть GUI режим
+- `npx playwright test названиеФайла --headed` - запустить тест в браузере
 
