@@ -1,5 +1,6 @@
 const { test } = require('@playwright/test');
 const { webkit } = require('playwright');
+const {waitForPageLoaded} = require("../commands/waits");
 
 /**
  * Служит для генерации тестовых данных, зачастую для генерации селекторов
@@ -23,18 +24,5 @@ test('Page Factory', async () => {
 
     const findButton = new Selector('Найти');
     await page.locator(findButton.selector).click();
-    await waitForPageLoaded(page);
+    await waitForPageLoaded(page, 1000);
 })
-
-async function waitForPageLoaded(page) {
-    let old_html = await page.evaluate(() => document.documentElement.innerHTML);
-    let new_html = '';
-
-    while (true){
-        await page.waitForTimeout(1000);
-        new_html = await page.evaluate(() => document.documentElement.innerHTML);
-        if (new_html === old_html) break
-        old_html = new_html;
-        new_html = '';
-    }
-}
