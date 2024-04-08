@@ -2,7 +2,7 @@ const { test, expect} = require('@playwright/test');
 const { webkit } = require('playwright');
 
 test.describe('Test', () => {
-    test('Test Safari', async () => {
+    test('Test Safari', async ({}, workerInfo) => {
         const browser = await webkit.launch();
         const context = await browser.newContext()
 

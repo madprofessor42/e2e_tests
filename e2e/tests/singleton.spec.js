@@ -1,6 +1,5 @@
 const { test } = require('@playwright/test');
 const { webkit } = require('playwright');
-const secret = require('../secret.json');
 
 // https://playwright.dev/docs/test-retries#reuse-single-page-between-tests
 

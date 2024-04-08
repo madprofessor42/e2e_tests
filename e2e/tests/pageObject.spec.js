@@ -1,6 +1,5 @@
 const { test } = require('@playwright/test');
 const { webkit } = require('playwright');
-const secret = require("../secret.json");
 
 /**
  * Декомпозирует приложение на страницы. Что бы переиспользовать методы в тестах
